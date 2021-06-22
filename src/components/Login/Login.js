@@ -19,9 +19,6 @@ function Login({ onLogin, isChecked }) {
     onLogin({ password, email });
   }, [password, email]);
 
-  const handleRememberMe = ()=>{
-    isChecked()
-  };
 
   return (
     <>
@@ -30,7 +27,7 @@ function Login({ onLogin, isChecked }) {
         onSubmit={handleSubmit}
         changeEmail={handleInputEmail}
         changePassword={handleInputPassword}
-        checked={handleRememberMe}
+
       ></Auth>
     </>
   );

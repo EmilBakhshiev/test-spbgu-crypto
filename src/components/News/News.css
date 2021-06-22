@@ -1,0 +1,41 @@
+.news {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.news__header {
+  display: flex;
+}
+
+.news__title {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #15195f;
+}
+.title__index {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: #15195f;
+  opacity: 0.7;
+  margin-right: 16px;
+}
+
+.news__btn-close {
+  border: none;
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: #15195f;
+  opacity: 0.7;
+  background-color: transparent;
+}
+

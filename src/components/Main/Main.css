@@ -1,0 +1,8 @@
+.main{
+    min-height: 100vh;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #E5E5E5;
+    padding-left: 32px;
+    display: flex;
+}

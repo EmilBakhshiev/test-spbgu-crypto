@@ -1,0 +1,28 @@
+.card_size_large {
+  padding-left: 20px;
+  padding-right: 27px;
+  max-width: 452px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+.card__title_size_large {
+  margin-bottom: 19px;
+}
+
+.data__info {
+    display: block;
+  margin: 0;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #15195f;
+  padding-right: 70px;
+}
+.data__info::after{
+    content: '';
+    border-right: 1px solid #15195F;
+    opacity: 0.2;
+    margin-left: 70px;
+    margin-right: 24px;
+}

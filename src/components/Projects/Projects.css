@@ -1,0 +1,19 @@
+.project{
+    margin-left: 85px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.title-section {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #15195f;
+  text-align: left;
+}
+.project__wrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1388px;
+}

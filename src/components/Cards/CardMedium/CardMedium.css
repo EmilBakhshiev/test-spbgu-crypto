@@ -1,0 +1,50 @@
+.card_size_medium {
+  padding-left: 22px;
+  max-width: 416px;
+  margin-bottom: 16px;
+}
+
+.card__text_size_medium {
+  font-size: 14px;
+  line-height: 24px;
+  padding-bottom: 21px;
+}
+.card_status_fail {
+  background: rgba(235, 87, 87, 0.08);
+  border: 1px solid #eb5757;
+}
+.card__title_status_fail {
+  margin-right: 15px;
+}
+.card__title_status_fail::before {
+  content: '';
+  background-image: url(../../../images/fail.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding-right: 24px;
+  margin-right: 10px;
+}
+
+.card__title_status_success {
+  color: #219653;
+}
+.card__title_status_success::before {
+  content: '';
+  background-image: url('../../../images/success.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding-right: 8px;
+  margin-right: 10px;
+}
+.card__text-span-fail{
+  font-weight: bold;
+  color: #eb5757;
+  opacity: 0.9;
+}
+.card__text-span-success{
+    font-weight: bold;
+    color: #219653;
+    opacity: 0.9;
+}

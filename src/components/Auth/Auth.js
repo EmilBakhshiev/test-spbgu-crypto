@@ -5,14 +5,17 @@ import * as yup from 'yup';
 import { Link } from 'react-router-dom';
 
 const validationsSchema = yup.object().shape({
-  email: yup.string().email('Введите корректный email').required('Обязательное поле'),
+  email: yup
+    .string()
+    .email('Введите корректный email')
+    .required('Обязательное поле'),
   password: yup
     .string()
     .required('Обязательное поле')
     .min(3, 'Пароль должен быть не менее 3 символов'),
 });
 
-function Auth({ name, onSubmit, changeEmail, changePassword, checked }) {
+function Auth({ name, onSubmit, changeEmail, changePassword }) {
   const {
     register,
     handleSubmit,
@@ -20,6 +23,7 @@ function Auth({ name, onSubmit, changeEmail, changePassword, checked }) {
   } = useForm({
     resolver: yupResolver(validationsSchema),
   });
+  console.log();
   return (
     <div className='auth'>
       <div className='auth__container'>
@@ -43,7 +47,9 @@ function Auth({ name, onSubmit, changeEmail, changePassword, checked }) {
             <input
               {...register('email')}
               type='email'
-              className='auth__input'
+              className={`auth__input ${
+                errors.email?.message.length > 1 ? 'auth__input-error' : ''
+              }`}
               name='email'
               id='email'
               placeholder='Введите логин или e-mail'
@@ -57,7 +63,9 @@ function Auth({ name, onSubmit, changeEmail, changePassword, checked }) {
             <input
               {...register('password')}
               type='password'
-              className='auth__input'
+              className={`auth__input ${
+                errors.password?.message.length > 1 ? 'auth__input-error' : ''
+              }`}
               name='password'
               id='password'
               placeholder='Введите пароль'
@@ -71,7 +79,6 @@ function Auth({ name, onSubmit, changeEmail, changePassword, checked }) {
                   className='auth__checkbox'
                   type='checkbox'
                   id='remember-me'
-                  onClick={checked}
                 />
                 Запомнить меня
               </label>
